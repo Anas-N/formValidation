@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>validation</title>
+    <style>
+      .mystyle {
+        border: solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>validation</h1>
+    <div>
+      <!-- form start --> 
+
+      <form action="" method="post" class="" id="" name="register" enctype="multipart/form-data">
+
+        <!-- name validation -->
+        <label for="" id="name">Name</label>
+        <input
+          type="text"
+          value=""
+          placeholder="Name"
+          name="name"
+          id="myDIV"
+          oninput="myInput()"
+        /><br />
+        <span style="color: red" id="s1"></span>
+        <br />
+
+        <!-- gender validation -->
+        <label for="" id="gender">Gender:</label>
+        <input type="radio" value="m" name="gender" />M
+        <input type="radio" value="f" name="gender" />F
+        <br />
+        <br />
+
+        <!-- Language validation -->
+        <label for="" id="name">Language</label>
+        <input
+          type="checkbox"
+          value="English"
+          id="sd1"
+          name="checkbox"
+        />English
+        <input
+          type="checkbox"
+          on
+          value="Malayalam"
+          id="sd2"
+          name="checkbox"
+        />Malayalam
+        <br />
+        <br />
+
+        <!-- dropdown validation -->
+        <label for="" id="">Country</label>
+        <select   id="can">
+          <option value="" disabled selected>choose</option>
+          <optgroup label="India">
+            <option value="kerala">Kerala</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Andra Predesh">Andra Predesh</option>
+          </optgroup>
+          <optgroup label="USA">
+            <option value="Newyork">Newyork</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Sanfrancisco">Sanfrancisco</option>
+          </optgroup>
+        </select>
+        <br />
+        <br />
+
+        <!-- address validation -->
+        <label for="" id="">Address</label>
+        <textarea  id="wer1" cols="30" rows="10"></textarea>
+        <br>
+        <br>
+
+        <!-- email validation -->
+        <label for="">Email</label>
+        <input type="mail" id="qwe"/>
+         <br>
+         <br>
+
+         <!-- time validation -->
+         <label for="">Time</label>
+        <input type="time" id="qwe3"/>
+        <br>
+        <br>
+
+
+        <!-- date validation -->
+        <label for="">Date</label>
+        <input type="date" id="qwe4"/>
+        <br>
+        <br>
+
+        <!-- password validation -->
+        <label for="">Password</label>
+        <input id="ery" oninput="clicks()" type="password">
+        <br>
+        <p id="s2"></p>
+          <br>
+          <br>
+          <label for="">File</label>
+          <input id="ey"  type="file">
+           <br>
+           <br>
+
+           <!-- button -->
+        <button type="submit" id="" onclick="return valid()">Click</button>
+      </form>
+      <!-- form end -->
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- // red color -->
+    <script>
+
+      function myInput() {
+    var name = document.register.name.value;
+    if (name == "") {
+      msg = "Enter your name";
+      document.getElementById("s1").innerHTML = msg;
+      element = document.getElementById("myDIV");
+      element.classList.add("mystyle");
+    } 
+  }
+    </script>
+  </body>
+</html>
